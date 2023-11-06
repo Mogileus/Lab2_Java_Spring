@@ -8,9 +8,9 @@ import org.springframework.stereotype.Component;
 @Component("personBean")
 public class Person {
 
-   @Qualifier("catBean")
+   @Qualifier("magazineBean")
    @Autowired
-    private Pet pet;
+    private Library library;
     @Value("${person.surname}")
     private String surname;
     @Value("${person.age}")
@@ -20,27 +20,21 @@ public class Person {
         System.out.println("Person bean is created");
     }
 
- /*   @Autowired
-    public Person(@Qualifier("catBean") Pet pet) {
-        System.out.println("Person bean is created");
-        this.pet = pet;
-    }*/
-
 
   @Autowired
-   public void setPet(@Qualifier("catBean") Pet pet) {
-       System.out.println("Class Person: set Pet");
-        this.pet = pet;
+   public void setLibrary(@Qualifier("magazineBean") Library library) {
+       System.out.println("Class Person: set Library");
+        this.library = library;
     }
-    public Person(Pet pet) {
+    public Person(Library library) {
         System.out.println("Person bean is created");
-        this.pet = pet;
+        this.library = library;
     }
 
 
-    public void callYourPet() {
-        System.out.println("Hello, my lovely pet");
-        pet.say();
+    public void YourOrder() {
+        System.out.println("I want that...");
+        library.say();
     }
 
     public String getSurname() {
@@ -48,7 +42,7 @@ public class Person {
     }
 
     public void setSurname(String surname) {
-        System.out.println("Class Person:set surname");
+        System.out.println("Class Person: set surname");
         this.surname = surname;
     }
 
@@ -57,8 +51,7 @@ public class Person {
     }
 
     public void setAge(int age) {
-        System.out.println("Class Person:set age");
+        System.out.println("Class Person: set age");
         this.age = age;
     }
-
 }
