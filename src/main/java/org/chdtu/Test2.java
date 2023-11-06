@@ -7,8 +7,8 @@ public class Test2 {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
-        Pet pet = context.getBean("myPet", Pet.class);
-        pet.say();
+        Library library = context.getBean("myLibrary", Library.class);
+        library.say();
 
         context.close();
     }
