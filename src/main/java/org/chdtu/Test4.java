@@ -5,35 +5,35 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Test4 {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context =
-                new ClassPathXmlApplicationContext("applicationContext2.xml"/*, "applicationContext.xml"*/);
-        //singleton
-/*       Cat myCat = context.getBean("myPet", Cat.class);
-        myCat.setName("Lucy");
-        Cat yourCat = context.getBean("myPet", Cat.class);
-        yourCat.setName("Stitch");
+                new ClassPathXmlApplicationContext("applicationContext2.xml");
+        singleton
+       Magazine myMagazine = context.getBean("myLibrary", Magazine.class);
+        myMagazine.setName("Time");
+        Magazine yourMagazine = context.getBean("myLibrary", Magazine.class);
+        yourMagazine.setName("Cherkasy");
 
-        System.out.println(myCat.getName());
-        System.out.println(yourCat.getName());*/
+        System.out.println(myMagazine.getName());
+        System.out.println(yourMagazine.getName());
 
-/*        System.out.println("Змінні посилаються на один і той же обєкт? " + (myDog == yourDog));
-        System.out.println(myDog);
-        System.out.println(yourDog);*/
-        //singleton
+    System.out.println("Змінні посилаються на один і той же обєкт? " + (myBook == yourBook));
+        System.out.println(myBook);
+        System.out.println(yourBook);
+        singleton
 
-        //prototype
-/*        Dog myDog = context.getBean("myPet", Dog.class);
-        myDog.setName("Nika");
-        Dog yourDog = context.getBean("myPet", Dog.class);
-        yourDog.setName("Juja");
+        prototype
+       Book myBook = context.getBean("myLibrary", Book.class);
+        myBook.setName("Eneida");
+        Book yourBook = context.getBean("myLibrary", Book.class);
+        yourBook.setName("Taras Bulba");
 
-        System.out.println(myDog.getName());
-        System.out.println(yourDog.getName());*/
+        System.out.println(myBook.getName());
+        System.out.println(yourBook.getName());
 
-/*        System.out.println("Змінні посилаються на один і той же обєкт? " + (myDog == yourDog));
-        System.out.println(myDog);
-        System.out.println(yourDog);*/
+       System.out.println("Змінні посилаються на один і той же обєкт? " + (myBook == yourBook));
+        System.out.println(myBook);
+        System.out.println(yourBook);
 
-        //prototype
+        prototype
 
         context.close();
     }
