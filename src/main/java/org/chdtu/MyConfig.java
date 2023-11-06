@@ -6,16 +6,14 @@ import org.springframework.context.annotation.*;
 @PropertySource("classpath:myApp.properties")
 public class MyConfig {
 
-    //@ComponentScan("org.chdtu")
     @Bean
     @Scope("singleton")
-    public Pet catBean(){
-//        System.out.println("Create bean");
-        return new Cat();
+    public Library catBean(){
+        return new Magazine();
     }
 
     @Bean
     public Person personBean(){
-        return new Person(catBean());
+        return new Person(magazineBean());
     }
 }
