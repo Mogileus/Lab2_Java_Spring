@@ -7,9 +7,9 @@ public class Test6 {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(MyConfig.class);
 
        Person person = context.getBean("personBean", Person.class);
-       person.callYourPet();
-        Pet cat1 = context.getBean("catBean", Pet.class);
-        Pet cat2 = context.getBean("catBean", Pet.class);
+       person.YourOrder();
+        Library magazine1 = context.getBean("magazineBean", Library.class);
+        Library magazine2 = context.getBean("magazineBean", Library.class);
 
 
         context.close();
