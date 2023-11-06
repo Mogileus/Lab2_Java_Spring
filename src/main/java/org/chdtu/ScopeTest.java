@@ -7,13 +7,13 @@ public class ScopeTest {
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext3.xml");
 
-        Cat myCat = context.getBean("cat", Cat.class);
-        myCat.say();
-        Cat yourCat = context.getBean("cat", Cat.class);
+        Magazine myMagazine = context.getBean("magazine", Magazine.class);
+        myMagazine.say();
+        Magazine yourMagazine = context.getBean("magazine", Magazine.class);
 
-        System.out.println("Змінні посилаються на один і той обєкт? " + (myCat == yourCat));
-        System.out.println(myCat);
-        System.out.println(yourCat);
+        System.out.println("Змінні посилаються на один і той обєкт? " + (myMagazine == yourMagazine));
+        System.out.println(myMagazine);
+        System.out.println(yourMagazine);
 
         context.close();
     }
