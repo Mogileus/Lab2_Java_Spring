@@ -9,15 +9,13 @@ http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:property-placeholder location="classpath:myApp.properties"/>
 
-    <bean id="myPet"
-          class="org.chdtu.Dog">
-        <!--    class = "org.chdtu.Dog">-->
+    <bean id="myLibrary"
+          class="org.chdtu.Book">
     </bean>
 
     <bean id="myPerson"
           class="org.chdtu.Person">
-            <property name="pet" ref="myPet"/>
-<!--                <constructor-arg ref="myPet"/>-->
+            <property name="library" ref="myLibrary"/>
         <property name="surname" value="Mogiley"/>
         <property name="age" value="22"/>
     </bean>
