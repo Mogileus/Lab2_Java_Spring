@@ -7,13 +7,11 @@ public class Test3 {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "applicationContext.xml"
         );
-        Pet pet = context.getBean("myPet", Pet.class);
-//        Pet pet = new Cat();
-        Person person = new Person(pet);
-        person.callYourPet();
+        Library library = context.getBean("myLibrary", Library.class);
+        Person person = new Person(library);
+        person.YourOrder();
 
         Person person1 = context.getBean("myPerson", Person.class);
-//        person.callYourPet();
         System.out.println(person1.getSurname());
         System.out.println(person1.getAge());
 
