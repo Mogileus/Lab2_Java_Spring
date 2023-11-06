@@ -5,24 +5,22 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-//@Component("catBean")
-public class Cat implements Pet{
+public class Magazine implements Library{
 
     @PostConstruct
     public void init(){
-        System.out.println("Class Cat: init method");
+        System.out.println("Class Magazine: init method");
     }
 
     @PreDestroy
     public void destroy(){
-        System.out.println("Class Cat: destroy method");
+        System.out.println("Class Magazine: destroy method");
     }
 
-    public Cat() {
-        System.out.println("Cat bean is created");
+    public Magazine() {
+        System.out.println("Magazine bean is created");
     }
     public void say() {
-        System.out.println("meow");
+        System.out.println("magazine");
     }
-
 }
