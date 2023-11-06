@@ -1,5 +1,5 @@
 package org.chdtu;
 
-public interface Pet {
+public interface Library {
     void say();
 }
